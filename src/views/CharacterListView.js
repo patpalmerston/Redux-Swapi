@@ -12,13 +12,13 @@ class CharacterListView extends React.Component {
 
   componentDidMount() {
     // call our action
-    this.props.getSwapi()
+    return (this.props.getSwapi())
   }
 
   render() {
     if (this.props.fetching) {
       // return something here to indicate that you are fetching data
-      <h3>We Are Fetching Swapi Stuff!</h3>
+      <h3>We are fetching stuff!</h3>
     }
     return (
       <div className="CharactersList_wrapper">

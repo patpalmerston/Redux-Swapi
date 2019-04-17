@@ -13,8 +13,8 @@ export const FETCH_FAILURE = 'FETCH_FAILURE';
 export const getSwapi = () => dispatch => {
   dispatch({ type: FETCH_START });
 
-  axios.get('`https://swapi.co/api/people/`')
-    .then((res) => dispatch({
+  axios.get('https://swapi.co/api/people/')
+    .then(res => dispatch({
       type: FETCH_SUCCESS,
       payload: res.data
     }))
